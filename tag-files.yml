@@ -15,5 +15,4 @@ run:
     - -e
     - -c
     - |
-      ls -r
       echo $PACKAGE_VERSION
