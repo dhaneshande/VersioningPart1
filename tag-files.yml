@@ -16,5 +16,4 @@ run:
     - -c
     - |
       ls some-files
-      PACKAGE_VERSION=$(awk '/version/{gsub(/("|",)/,"",$2);print $2};' package.json)
       echo $PACKAGE_VERSION
