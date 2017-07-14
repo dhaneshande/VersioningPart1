@@ -7,10 +7,6 @@ image_resource:
 
 inputs:
   - name: resource-tutorial
-  
-outputs:
-  - name: some-files
-
 
 run:
   path: bash
@@ -22,6 +18,5 @@ run:
       pwd
       ls -R
       cd resource-tutorial
-      PACKAGE_VERSION=$(awk '/version/{gsub(/("|",)/,"",$2);print $2};' package.json)
+      PACKAGE_VERSION=awk '/version/{gsub(/("|",)/,"",$2);print $2};' package.json
       echo $PACKAGE_VERSION
- 
