@@ -15,4 +15,4 @@ run:
     - -e
     - -c
     - |
-      ls some-files
+      ls some-files/*
