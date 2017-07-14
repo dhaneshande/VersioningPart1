@@ -18,6 +18,5 @@ run:
       pwd
       ls -R
       cd resource-tutorial
-      VERSION=$(npm version patch)
-      VERSION=$(echo $VERSION | cut -c 2-)
-      echo $VERSION
+      PACKAGE_VERSION="$(awk '/version/{gsub(/("|",)/,"",$2);print $2};' package.json)""
+      echo "$PACKAGE_VERSION"
