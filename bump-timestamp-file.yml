@@ -20,3 +20,7 @@ run:
       cd resource-tutorial
       PACKAGE_VERSION=$(awk '/version/{gsub(/("|",)/,"",$2);print $2};' package.json)
       echo $PACKAGE_VERSION
+      git config --global user.email "dande@miraclesoft.com"
+      git config --global user.name "dhaneshande"
+      git add .
+      git commit -m "Bumped release"
