@@ -18,5 +18,10 @@ run:
       pwd
       ls -R
       cd resource-tutorial
-      PACKAGE_VERSION=$(awk '/version/{gsub(/("|",)/,"",$2);print $2};' package.json)
-      echo $PACKAGE_VERSION
+      PACKAGE_VERSION=$(cat package.json \
+      | grep version \
+      | head -1 \
+      | awk -F: '{ print $2 }' \
+      | sed 's/[",]//g' \
+      | tr -d '[[:space:]]')
+      echo $ PACKAGE_VERSION
