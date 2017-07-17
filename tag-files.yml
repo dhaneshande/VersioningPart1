@@ -15,4 +15,4 @@ run:
     - -e
     - -c
     - |
-      echo "$PACKAGE_VERSION"
+      echo "current package version:${PACKAGE_VERSION}"
