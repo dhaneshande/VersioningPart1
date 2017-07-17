@@ -15,4 +15,8 @@ run:
     - -e
     - -c
     - |
+      ls -l
+      pwd
+      ls -R
+      cd resource-tutorial
       echo "current package version:${PACKAGE_VERSION}"
