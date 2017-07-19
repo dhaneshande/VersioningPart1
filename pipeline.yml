@@ -1,12 +1,7 @@
 ---
-resources:
-- name: resource-tutorial
-  type: git
-  source:
-    uri: https://github.com/dhaneshande/VersioningPart1.git
-
 jobs:
 - name: job-get-version
+  public: true
   serial: true
   plan:
   - get: resource-tutorial
@@ -15,3 +10,45 @@ jobs:
     file: resource-tutorial/bump-timestamp-file.yml
   - task: show-some-files
     file: resource-tutorial/tag-files.yml
+  - put: hello-world-docker-image
+    params:
+      build: resource-tutorial/docker
+- name: Image-Pull-and-Run
+  public: true
+  serial: true
+  plan:
+  - get: resource-tutorial
+  - get: hello-world-docker-image
+    passed: [job-publish]
+    trigger: true
+  - task: say-hello
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: dhaneshande/nodeappbuild, tag: v1}
+        inputs:
+        - name: job-publish
+      run:
+        path: /bin/bash
+        args:
+        - -exc
+        - |
+          pwd
+          ls -R
+          cd /usr/src/app
+          ls -R
+          npm start  
+resources:
+- name: resource-tutorial
+  type: git
+  source:
+    uri: https://github.com/dhaneshande/VersioningPart1.git
+- name: hello-world-docker-image
+  type: docker-image
+  source:
+    email: {{docker-hub-email}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
+    repository: {{docker-hub-image-hello-world}}
+    tag: {{docker-tag-name}}
