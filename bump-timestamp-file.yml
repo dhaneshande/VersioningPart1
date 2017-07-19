@@ -12,7 +12,7 @@ outputs:
 - name: some-files
 
 run:
-  path: bash
+  path: bash/bin/sh
   args:
     - -e
     - -c
@@ -29,4 +29,5 @@ run:
       | tr -d '[[:space:]]')
       echo "current package version:${PACKAGE_VERSION}"
       ls -R
+      docker ps
      
