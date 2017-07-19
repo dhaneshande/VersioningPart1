@@ -19,7 +19,7 @@ jobs:
   plan:
   - get: resource-tutorial
   - get: hello-world-docker-image
-    passed: [job-publish]
+    passed: [job-get-version]
     trigger: true
   - task: say-hello
     config:
@@ -28,7 +28,7 @@ jobs:
         type: docker-image
         source: {repository: dhaneshande/nodeappbuild, tag: v1}
         inputs:
-        - name: job-publish
+        - name: job-get-version
       run:
         path: /bin/bash
         args:
