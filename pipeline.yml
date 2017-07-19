@@ -13,6 +13,7 @@ jobs:
   - put: hello-world-docker-image
     params:
       build: resource-tutorial/docker
+      tag: ${PACKAGE_VERSION}
 - name: Image-Pull-and-Run
   public: true
   serial: true
