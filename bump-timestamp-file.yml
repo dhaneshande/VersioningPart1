@@ -28,4 +28,3 @@ run:
       | sed 's/[",]//g' \
       | tr -d '[[:space:]]')
       echo "current package version:${PACKAGE_VERSION}"
-      docker ps
