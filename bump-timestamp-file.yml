@@ -12,7 +12,7 @@ outputs:
 - name: some-files
 
 run:
-  path: bash/bin/sh
+  path: bash
   args:
     - -e
     - -c
