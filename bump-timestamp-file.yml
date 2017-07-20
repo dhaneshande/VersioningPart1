@@ -12,7 +12,7 @@ outputs:
 - name: some-files
 
 run:
-  path: bash
+  path: /bin/bash
   args:
     - -e
     - -c
@@ -28,3 +28,4 @@ run:
       | sed 's/[",]//g' \
       | tr -d '[[:space:]]')
       echo "current package version:${PACKAGE_VERSION}"
+      docker ps
