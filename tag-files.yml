@@ -20,5 +20,4 @@ run:
       ls -R
       cd some-files
       ls
-      cat some-files
       echo "current package version:${PACKAGE_VERSION}"
