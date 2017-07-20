@@ -29,5 +29,4 @@ run:
       | tr -d '[[:space:]]')
       echo "current package version:${PACKAGE_VERSION}"
       echo "$PACKAGE_VERSION" >> "$some-files"
-      ls -R
-      cat some-files
+      echo "current package version:${some-files}" 
