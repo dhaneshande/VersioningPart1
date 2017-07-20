@@ -29,3 +29,4 @@ run:
       | tr -d '[[:space:]]')
       echo "current package version:${PACKAGE_VERSION}"
       cp PACKAGE_VERSION some-files
+      ls 
