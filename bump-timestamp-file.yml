@@ -31,7 +31,7 @@ run:
       cd ..
       ls -la
       touch test.txt
-      chmod 777 .	  
+      chmod 777 test.txt	  
       cp -r test.txt some-files
       cd some-files
       ls -la  
