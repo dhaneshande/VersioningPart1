@@ -11,7 +11,7 @@ inputs:
 
 run:
   path: cat
-  args: some-files
+  args: [some-files/test.txt]
   #args:
    # - -e
     #- -c
