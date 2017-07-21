@@ -39,6 +39,6 @@ run:
       then 
       echo "$PACKAGE_VERSION" > "$sample"
       fi
-      echo "current package version:${test}"
       cd sample
+      ls -R
       cat test.txt	  
