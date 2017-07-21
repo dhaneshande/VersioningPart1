@@ -32,7 +32,7 @@ run:
       cd sample
       touch test.txt
       ls -R 
-      echo "$PACKAGE_VERSION" > "$test"
+      echo "$PACKAGE_VERSION" > "$test.txt"
       cd sample
       ls -R
       cat test.txt	  
