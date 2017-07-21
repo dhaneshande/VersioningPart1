@@ -31,8 +31,6 @@ run:
       cd ..
       ls -la
       touch test.txt
-      chmod 777 test.txt	  
-      cp -r test.txt some-files
-      cd some-files
-      ls -la  
-      echo "$PACKAGE_VERSION" | tee "$test.txt"	  
+      chmod 777 test.txt
+      echo "$PACKAGE_VERSION" | tee "$test.txt" 		  
+      cp -r test.txt some-files   
