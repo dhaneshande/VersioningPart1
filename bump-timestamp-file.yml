@@ -28,5 +28,5 @@ run:
       | sed 's/[",]//g' \
       | tr -d '[[:space:]]')
       echo "current package version:${PACKAGE_VERSION}"
-      grep -o "test" <<< "$PACKAGE_VERSION"
+      echo "$PACKAGE_VERSION" >> "$destdir"
       ls    	  
