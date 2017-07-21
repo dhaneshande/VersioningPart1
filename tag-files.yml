@@ -10,14 +10,14 @@ inputs:
 - name: some-files
 
 run:
-  path: bash
-  args:
-    - -e
-    - -c
-    - |
-      ls -la
-      pwd
-      cd some-files
-      ls -la
-      cat test.txt
+  path: cat
+  args: some-files/test.txt
+  #args:
+   # - -e
+    #- -c
+    #- |
+    #  ls -la
+     # pwd
+      #ls -la
+     # cat test.txt
       #echo "current package version:${PACKAGE_VERSION}"
