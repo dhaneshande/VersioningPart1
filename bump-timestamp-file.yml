@@ -28,8 +28,8 @@ run:
       | sed 's/[",]//g' \
       | tr -d '[[:space:]]')
       echo "current package version:${PACKAGE_VERSION}"
-      mkdir sample
-      cd sample
+      cd ..
+      ls -la
       touch test.txt  
       cp -r test.txt some-files
       cd some-files
