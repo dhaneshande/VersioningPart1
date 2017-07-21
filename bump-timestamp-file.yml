@@ -30,7 +30,8 @@ run:
       echo "current package version:${PACKAGE_VERSION}"
       cd ..
       ls -la
-      touch test.txt  
+      touch test.txt
+      chmod 777 .	  
       cp -r test.txt some-files
       cd some-files
       ls -la  
