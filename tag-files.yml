@@ -18,5 +18,3 @@ run:
       ls -la
       cd some-files
       ls -la
-      head -c 10 test.txt
-      #echo "current package version:${PACKAGE_VERSION}"
