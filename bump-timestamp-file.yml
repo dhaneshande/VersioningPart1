@@ -32,5 +32,5 @@ run:
       cd sample
       touch test.txt
       ls -R
-      echo "$PACKAGE_VERSION" >> "$test.txt"
-      echo "current package version:${test.txt}"  
+      echo "$PACKAGE_VERSION" >> "$test"
+      echo "current package version:${test}"  
