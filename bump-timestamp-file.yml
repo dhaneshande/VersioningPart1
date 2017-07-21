@@ -34,4 +34,4 @@ run:
       ls -l  
       echo "$PACKAGE_VERSION" > "$test.txt"
       ls -l 
-      cat test.txt	  
+      cat > test.txt	  
