@@ -35,6 +35,4 @@ run:
       cp -r test.txt some-files
       cd some-files
       ls -la  
-      echo "$PACKAGE_VERSION" | tee "$test.txt"
-      ls -la 
-      cat > test.txt	  
+      echo "$PACKAGE_VERSION" | tee "$test.txt"	  
