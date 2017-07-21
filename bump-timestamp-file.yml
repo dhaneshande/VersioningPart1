@@ -28,12 +28,9 @@ run:
       | sed 's/[",]//g' \
       | tr -d '[[:space:]]')
       echo "current package version:${PACKAGE_VERSION}"
-      mkdir sample
-      cd sample
-      touch test.txt
-      cp -r test.txt some-files
       cd some-files
+      touch test.txt
       ls -la  
       echo "$PACKAGE_VERSION" > "$test.txt"
-      ls -l 
+      ls -la 
       cat > test.txt	  
