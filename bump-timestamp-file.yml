@@ -31,10 +31,8 @@ run:
       mkdir sample
       cd sample
       touch test.txt
-      ls -R
-      cd ..
       ls -R 
-      echo "$PACKAGE_VERSION" > "$sample"
+      echo "$PACKAGE_VERSION" > "$test"
       cd sample
       ls -R
       cat test.txt	  
