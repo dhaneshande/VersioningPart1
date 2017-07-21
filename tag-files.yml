@@ -15,7 +15,7 @@ run:
     - -e
     - -c
     - |
-      ls -l
+      ls -la
       pwd
       ls -R
       cd some-files
