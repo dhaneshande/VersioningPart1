@@ -30,3 +30,5 @@ run:
       echo "current package version:${PACKAGE_VERSION}"
       echo "$PACKAGE_VERSION" >> "$some-files"
       echo "current package version:${some-files}"
+      cd some-files
+      ls
