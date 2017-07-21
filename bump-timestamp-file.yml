@@ -32,4 +32,4 @@ run:
       echo "current package version:${some-files}"  
       cd ..
       cd some-files
-      ls  	  
+      ls -R	  
