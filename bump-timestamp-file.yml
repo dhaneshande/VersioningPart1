@@ -32,6 +32,6 @@ run:
       cd sample
       touch test.txt
       ls -l  
-      echo "$PACKAGE_VERSION" > "$test"
+      echo "$PACKAGE_VERSION" > "$test.txt"
       ls -l 
       cat test.txt	  
