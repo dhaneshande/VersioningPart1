@@ -33,12 +33,8 @@ run:
       touch test.txt
       ls -R
       cd ..
-      ls -R
-      sample=/test
-      if [ -f "$sample" ]
-      then 
+      ls -R 
       echo "$PACKAGE_VERSION" > "$sample"
-      fi
       cd sample
       ls -R
       cat test.txt	  
