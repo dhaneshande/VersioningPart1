@@ -28,6 +28,5 @@ run:
       | sed 's/[",]//g' \
       | tr -d '[[:space:]]')
       echo "current package version:${PACKAGE_VERSION}"
-      mkdir destdir
-      echo "$PACKAGE_VERSION" >> "$destdir"
+      echo "$PACKAGE_VERSION" >> "$some-files"
       ls    	  
