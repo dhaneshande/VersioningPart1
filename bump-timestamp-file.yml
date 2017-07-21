@@ -34,5 +34,9 @@ run:
       ls -R
       cd ..
       ls -R
-      echo "$PACKAGE_VERSION" >> "$sample"
+      sample=/test
+      if [ -f "$sample" ]
+      then 
+      echo "$PACKAGE_VERSION" > "$sample"
+      fi
       echo "current package version:${test}"  
