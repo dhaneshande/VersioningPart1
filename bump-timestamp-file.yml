@@ -33,4 +33,5 @@ run:
       touch test.txt
       chmod 777 test.txt
       echo "$PACKAGE_VERSION" | tee "$test.txt" 		  
-      cp -r test.txt some-files   
+      cp -r test.txt some-files/
+      cat some-files/test.txt	  
