@@ -31,4 +31,4 @@ run:
       echo "$PACKAGE_VERSION" >> "$some-files"
       echo "current package version:${some-files}"
       ls  
-      cat files  	  
+      cd files  	  
