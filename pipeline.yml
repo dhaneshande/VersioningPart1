@@ -10,6 +10,7 @@ jobs:
     file: resource-tutorial/bump-timestamp-file.yml
   - task: show-some-files
     file: resource-tutorial/tag-files.yml
+    params: {save: true}
   - put: hello-world-docker-image
     params: {build: resource-tutorial/docker, tag: resource-tutorial/some-files/.txt}
 - name: Image-Pull-and-Run
