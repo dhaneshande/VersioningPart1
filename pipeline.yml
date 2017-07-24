@@ -18,7 +18,6 @@ jobs:
   serial: true
   plan:
   - get: resource-tutorial
-    trigger: true
   - get: hello-world-docker-image
     passed: [job-get-version]
     trigger: true
@@ -26,6 +25,9 @@ jobs:
   - task: say-hello
     config:
       platform: linux
+        inputs:
+        - name: resource-tutorial
+        - name: some-files
       image_resource:
         type: docker-image
         source: {repository: dhaneshande/nodeappbuild, tag: some-files/.txt}
