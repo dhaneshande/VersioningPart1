@@ -35,9 +35,8 @@ jobs:
         - -exc
         - |
           pwd
-          ls -R
           cd /usr/src/app
-          ls -R
+          ls -la
           npm start  
 resources:
 - name: resource-tutorial
