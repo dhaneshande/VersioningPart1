@@ -18,3 +18,4 @@ run:
       ls -la
       cd some-files
       ls -la
+      cat .txt
