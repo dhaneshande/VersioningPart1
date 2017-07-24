@@ -12,7 +12,7 @@ jobs:
     file: resource-tutorial/tag-files.yml
   - put: hello-world-docker-image
     params:
-      build: resource-tutorial/docker
+      build: {resource-tutorial/docker, tag: resource-tutorial/some-files/.txt}
 - name: Image-Pull-and-Run
   public: true
   serial: true
@@ -51,5 +51,4 @@ resources:
     username: {{docker-hub-username}}
     password: {{docker-hub-password}}
     repository: {{docker-hub-image-hello-world}}
-    tag: {{docker-tag-name}}
 	
