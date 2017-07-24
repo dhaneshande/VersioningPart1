@@ -28,7 +28,7 @@ jobs:
       image_resource:
         type: docker-image
         source: {repository: dhaneshande/nodeappbuild}
-        tag: some-files/.txt
+        tag: 1.0.0
         inputs:
         - name: job-get-version
       run:
