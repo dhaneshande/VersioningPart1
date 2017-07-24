@@ -32,6 +32,6 @@ run:
       ls -la
       touch test.txt
       chmod 777 test.txt
-      echo "$PACKAGE_VERSION" | tee "$test.txt" 		  
-      cp -r test.txt some-files/
-      cat some-files/test.txt	  
+      echo "$PACKAGE_VERSION" > "$test.txt" 		  
+      cp -r .txt some-files/
+      cat some-files/.txt	  
