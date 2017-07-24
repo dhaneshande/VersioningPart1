@@ -18,9 +18,11 @@ jobs:
   serial: true
   plan:
   - get: resource-tutorial
+    trigger: true
   - get: hello-world-docker-image
     passed: [job-get-version]
     trigger: true
+    params: {save: true}
   - task: say-hello
     config:
       platform: linux
@@ -37,7 +39,8 @@ jobs:
           pwd
           cd /usr/src/app
           ls -la
-          npm start  
+          npm start
+          exit		  
 resources:
 - name: resource-tutorial
   type: git
