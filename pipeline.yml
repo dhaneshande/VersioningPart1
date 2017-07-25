@@ -23,10 +23,10 @@ jobs:
     trigger: true
   - task: bump-timestamp-file
     file: resource-tutorial/bump-timestamp-file.yml
+  - task: show-some-files
     inputs:
     - name: resource-tutorial
     - name: some-files
-  - task: show-some-files
     config:
       platform: linux
       image_resource:
