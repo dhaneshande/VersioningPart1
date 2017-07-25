@@ -21,12 +21,16 @@ jobs:
   - get: resource-tutorial
     passed: [job-get-version]
     trigger: true
-  - task: say-hello
+  - task: bump-timestamp-file
+    file: resource-tutorial/bump-timestamp-file.yml
+  - task: show-some-files
+    file: resource-tutorial/tag-files.yml
+    params: {save: true}
     config:
       platform: linux
       image_resource:
         type: docker-image
-        source: { repository: dhaneshande/nodeappbuild, tag: "0.0.2"}
+        source: { repository: dhaneshande/nodeappbuild, tag: "some-files/.txt"}
         inputs:
         - name: job-get-version
       run:
