@@ -24,7 +24,6 @@ jobs:
   - task: bump-timestamp-file
     file: resource-tutorial/bump-timestamp-file.yml
   - task: show-some-files
-    file: resource-tutorial/tag-files.yml
     params: {save: true}
     config:
       platform: linux
