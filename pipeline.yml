@@ -21,9 +21,7 @@ jobs:
   - get: resource-tutorial
     passed: [job-get-version]
     trigger: true
-  - task: bump-timestamp-file
-    file: resource-tutorial/bump-timestamp-file.yml
-  - task: show-some-files
+  - task: say-hello
     config:
       platform: linux
       image_resource:
