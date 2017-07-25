@@ -18,7 +18,7 @@ jobs:
   serial: true
   plan:
   - get: resource-tutorial
-     passed: [job-get-version]
+  passed: [job-get-version]
   - get: hello-world-docker-image
   - task: say-hello
     config:
