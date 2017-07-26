@@ -31,7 +31,8 @@ jobs:
       platform: linux
       image_resource:
         type: docker-image
-        source: { repository: dhaneshande/nodeappbuild, tag: hello-world-docker-image/digest}
+        source: { repository: dhaneshande/nodeappbuild}
+        tag: "hello-world-docker-image/digest"
         inputs:
         - name: resource-tutorial
       run:
