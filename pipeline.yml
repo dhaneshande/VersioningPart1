@@ -27,7 +27,7 @@ jobs:
     config:
       platform: linux
     inputs:
-    - name: resource-tutorial       
+    - name: hello-world-docker-image       
     run:
         path: bash
         args:
