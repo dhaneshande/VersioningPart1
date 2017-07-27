@@ -27,14 +27,13 @@ jobs:
     config:
       platform: linux
     inputs:
-    - name: hello-world-docker-image       
+    - name: resource-tutorial       
     run:
-        path: bash
+        dir: resource-tutorial
+        path: bundle
         args:
-        - -e
-        - -c
-        - |
-          ls -la	  
+        - exec
+        - rspec	  
 resources:
 - name: resource-tutorial
   type: git
