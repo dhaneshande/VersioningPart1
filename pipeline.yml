@@ -29,15 +29,12 @@ jobs:
     inputs:
     - name: resource-tutorial       
     run:
-        path: /bin/bash
+        path: bash
         args:
-        - -exc
+        - -e
+        - -c
         - |
-          pwd
-          cd /usr/src/app
-          ls -la
-          npm start
-          exit		  
+          ls -la	  
 resources:
 - name: resource-tutorial
   type: git
