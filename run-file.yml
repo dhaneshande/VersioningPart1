@@ -1,0 +1,17 @@
+---
+platform: linux
+inputs:
+- name: resource-tutorial
+- name: hello-world-docker-image
+
+run:
+  path: /bin/bash
+  args:
+    - -e
+    - -c
+    - |
+      pwd
+      cd /usr/src/app
+      ls -la
+      npm start
+      exit		  
