@@ -24,16 +24,7 @@ jobs:
     passed: [job-get-version] 
   - task: run-image
     image: hello-world-docker-image
-    config:
-      platform: linux
-    inputs:
-    - name: resource-tutorial       
-    run:
-        dir: resource-tutorial
-        path: bundle
-        args:
-        - exec
-        - rspec	  
+    file:  resource-tutorial/tag-file.yml 
 resources:
 - name: resource-tutorial
   type: git
