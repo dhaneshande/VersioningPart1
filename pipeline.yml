@@ -24,7 +24,7 @@ jobs:
     passed: [job-get-version] 
   - task: run-image
     image: hello-world-docker-image
-    file:  resource-tutorial/run-file.yml 
+    file:  resource-tutorial/run-file.sh 
 resources:
 - name: resource-tutorial
   type: git
